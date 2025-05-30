@@ -6,20 +6,16 @@ public class Person
     private string surname;
     private DateTime birthDate;
 
-    public Person(string name, string surname, DateTime birthDate)
-    {
-        this.name = name;
-        this.surname = surname;
-        this.birthDate = birthDate;
-    }
+    public Person() : this("John", "Doe", new DateTime(1990, 1, 1))
+ {
+ }
 
-    public Person()
-    {
-        name = "John";
-        surname = "Doe";
-        birthDate = new DateTime(1990, 1, 1);
-    }
-
+ public Person(string name, string surname, DateTime birthDate)
+ {
+     this.name = name;
+     this.surname = surname;
+     this.birthDate = birthDate;
+ }
     public string Name
     {
         get { return name; }
